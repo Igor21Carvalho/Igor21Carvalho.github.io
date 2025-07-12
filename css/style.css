@@ -108,6 +108,15 @@ body, html {
     flex-direction: column;
     gap: 10px;
     margin-top: 20px;
+
+    /* NOVOS AJUSTES */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+    z-index: 10;
+    border-top: 1px solid #333;
   }
 
   .nav-menu.active {
@@ -117,18 +126,69 @@ body, html {
   .nav-menu ul {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+    padding: 0;
   }
 
   .nav-menu ul li {
     width: 100%;
+    padding: 10px 0;
   }
 
   .auth-buttons {
     flex-direction: column;
     gap: 10px;
     margin-top: 10px;
+
+    /* NOVO */
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .top-nav {
+    position: fixed;
+    background-color: #000000dd;
+  }
+
+  /* AJUSTE DO PERSONAGEM */
+  .floating-character {
+    width: 200px;
+    right: 0;
+    bottom: 0;
+  }
+
+  /* AJUSTES DO CONTEÚDO PRINCIPAL */
+  .hero-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* ESCONDER NAVEGAÇÃO LATERAL */
+  .scroll-nav {
+    display: none;
+  }
+
+  /* AJUSTES DO VÍDEO */
+  .video-area video {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .video-area {
+    width: 100%;
   }
 }
+
 
 
 
@@ -200,7 +260,7 @@ body, html {
 .floating-character {
   position: absolute;
   right: -5%;
-  bottom: -2%;
+  
   width: clamp(300px, 70vw, 1200px);
   animation: flutuar 6s ease-in-out infinite;
   z-index: 3;
@@ -226,11 +286,10 @@ body, html {
    z-index: 3;
 }
 
-.scroll-nav .dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: red;
+
+.dot img {
+  width: 50px;
+  height: 50px;
   cursor: pointer;
 }
 
@@ -313,4 +372,13 @@ body, html {
   margin: 0 auto;       /* centraliza horizontalmente */
   padding: 0 20px;  
   width: 100%;    /* espaçamento nas laterais em telas pequenas */
+}
+
+
+
+/*bLOQUEADOR DE ARRASTAR*/
+img {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
