@@ -85,6 +85,8 @@ body, html {
   color: white;
   border: none;
   cursor: pointer;
+  z-index: 15; /* GARANTE QUE FIQUE POR CIMA */
+  position: relative;
 }
 
 /* Menu mobile inicial oculto */
@@ -92,102 +94,11 @@ body, html {
   display: flex;
 }
 
-@media (max-width: 768px) {
-  .top-nav-inner {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
 
-  .menu-toggle {
-    display: block;
-  }
 
-  .nav-menu {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
 
-    /* NOVOS AJUSTES */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.95);
-    padding: 20px;
-    z-index: 10;
-    border-top: 1px solid #333;
-  }
 
-  .nav-menu.active {
-    display: flex;
-  }
 
-  .nav-menu ul {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding: 0;
-  }
-
-  .nav-menu ul li {
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .auth-buttons {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-
-    /* NOVO */
-    width: 100%;
-    align-items: flex-start;
-  }
-
-  .top-nav {
-    position: fixed;
-    background-color: #000000dd;
-  }
-
-  /* AJUSTE DO PERSONAGEM */
-  .floating-character {
-    width: 200px;
-    right: 0;
-    bottom: 0;
-  }
-
-  /* AJUSTES DO CONTEÚDO PRINCIPAL */
-  .hero-content {
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  /* ESCONDER NAVEGAÇÃO LATERAL */
-  .scroll-nav {
-    display: none;
-  }
-
-  /* AJUSTES DO VÍDEO */
-  .video-area video {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .video-area {
-    width: 100%;
-  }
-}
 
 
 
@@ -206,6 +117,7 @@ body, html {
   display: flex;
   align-items: center;
   padding-left: 80px;
+  
 }
 
 
@@ -381,4 +293,154 @@ img {
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
+}
+
+@media (max-width: 768px) {
+  .top-nav-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-logo img {
+    height: 40px;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  .menu-toggle-auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .auth-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(10, 20, 50, 0.821);
+    padding: 10px 20px;
+    border-top: 1px solid #39a3ff;
+    z-index: 15;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav-menu ul {
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .nav-menu ul li {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+  }
+
+  .nav-menu ul li a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  .nav-menu ul li a:hover {
+    background-color: rgba(15, 42, 123, 0.61);
+    color: white;
+    font-weight: bolder;
+  }
+
+  .floating-character {
+      width: 150vw !important;
+  max-width: 1000px !important;
+  height: auto !important;
+  right: -60% !important;
+  bottom: -10% !important;
+  position: absolute !important;
+  z-index: 2 !important;
+  /*transform: translateX(0%) !important;*/
+  }
+  .hero-section {
+    overflow: visible !important;
+  }
+  .hero-content {
+    
+    text-align: left;
+    padding: 10;
+    right: 20%;
+    margin-top: 60px;
+  }
+   .hero-content h1{
+    
+   font-size: 400% !important;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .scroll-nav {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+  .video-area video {
+    width: 80%;
+    margin-left: 0;
+    
+  }
+
+  .video-area {
+    width: 100%;
+    top: 10%;
+    right: -30%;
+    z-index: 0;
+  }
+
+  .top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(10, 20, 50, 0.367);
+    z-index: 30;
+    padding: 10px 20px;
+  }
+  
 }
