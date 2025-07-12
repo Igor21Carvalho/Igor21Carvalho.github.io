@@ -350,7 +350,7 @@ img {
     
     border-top: 1px solid #39a3ff;
     z-index: 15;
-    border-radius: 0, 0, 20px, 20px;
+    border-radius: 0,0, 20px;
     text-align: center;
   }
 
@@ -464,4 +464,49 @@ img {
   transition: background-color 0.3s ease;
   
 }
+ .sobre {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .titulo-sobre {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .descricao-sobre {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+
+  .blocos-sobre {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bloco {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .conteudo-bloco {
+    height: 200px;
+    padding: 10px;
+  }
+
+  .tag {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .robo {
+    width: 80px;
+    bottom: -10px;
+    left: -10px;
+  }
+
+
 }
