@@ -308,7 +308,8 @@ img {
   .nav-logo img {
      display: flex;
     justify-content: center;
-    width: 100%;
+    
+    height: 50px;
   }
 
   .menu-toggle {
@@ -390,7 +391,7 @@ img {
   }
 
   .floating-character {
-      width: 150vw !important;
+      width: 200vw !important;
   max-width: 1000px !important;
   height: auto !important;
   right: -250px!important;
@@ -435,7 +436,7 @@ img {
 
   .video-area {
     width: 100%;
-    top: 10%;
+    top: 20%;
     right: -30%;
     z-index: 0;
   }
