@@ -449,6 +449,8 @@ img {
     z-index: 30;
     padding: 10px 20px;
     align-items: center;
+    display: flex;
+  justify-content: center;
   }
   
 }
