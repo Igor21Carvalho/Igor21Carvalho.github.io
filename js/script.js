@@ -27,3 +27,32 @@ window.addEventListener('scroll', function () {
     header.classList.remove('scrolled');
   }
 });
+
+
+
+let indiceCurso = 0;
+const slidesCursos = document.querySelectorAll(".slide-curso");
+
+function trocarSlideCursos() {
+  indiceCurso = (indiceCurso + 1) % slidesCursos.length;
+  document.querySelector(".slides-cursos").style.transform =
+    `translateX(-${indiceCurso * 100}%)`;
+}
+
+setInterval(trocarSlideCursos, 4000); // troca a cada 4 segundos
+
+
+
+let indice = 0;
+const slides = document.querySelectorAll(".slide");
+
+function trocarSlide() {
+  indice = (indice + 1) % slides.length;
+  document.querySelector(".slides").style.transform = `translateX(-${indice * 100}%)`;
+}
+
+setInterval(trocarSlide, 4000); // troca a cada 4 segundos
+
+
+//paralaxx
+
