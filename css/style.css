@@ -195,14 +195,34 @@ body, html {
   display: flex;
   flex-direction: column;
   gap: 12px;
-   z-index: 3;
+  z-index: 3;
 }
 
+.dot {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .dot img {
   width: 50px;
   height: 50px;
   cursor: pointer;
+
+  border-radius: 50%;      /* 🔥 deixa o brilho circular */
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* HOVER COM BRILHO REDONDO */
+.dot:hover img {
+  transform: scale(1.15);
+  filter: brightness(1.25);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
 }
 
 
@@ -310,7 +330,7 @@ img {
      display: flex;
     justify-content: center;
     
-    height: 50px;
+    height: 20px;
   }
 
   .menu-toggle {
@@ -510,3 +530,435 @@ img {
 
 
 }
+
+
+
+
+.titulo-populares {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;           /* ajuste se quiser outra cor */
+  margin-bottom: 10px;
+}
+
+.subtitulo-populares {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #d0d0d0;           /* cinza leve */
+  margin-bottom: 30px;
+}
+.carrossel-cursos {
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.slides-cursos {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide-curso {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cursos-populares {
+  position: relative;
+  padding: 60px 0;
+  background-image: url("../img/fundo_cursos.jpg"); /* ALTERE O CAMINHO AQUI */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* 🔥 fundo travado */
+  color: #fff;
+}
+
+.cursos-populares::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.74); /* escurece o fundo para dar contraste */
+  
+  z-index: 1;
+}
+
+.cursos-populares .container {
+  position: relative;
+  z-index: 2; /* mantém o conteúdo por cima */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+ .carrossel-cursos {
+    width: 90%;
+    max-width: 200px;
+    height: 300px;
+  }
+.sobre-lado-a-lado {
+    flex-direction: column;    /* card em cima, carrossel embaixo */
+    gap: 25px;
+  }
+
+  .card-sobre {
+    width: 90%;               /* ocupa quase toda a largura */
+    max-width: 340px;         /* limite pra não ficar gigante */
+    margin: 0 auto;
+  }
+
+  .carrossel {
+    width: 90%;
+    max-width: 350px;
+    height: 200px;            /* proporção boa pro celular */
+  }
+
+  .slide {
+    object-fit: cover;
+  }
+
+  /* Desativar hover no celular */
+  .card-sobre:hover {
+    transform: none;
+    outline: none;
+    animation: pulsar 2s infinite ease-in-out;
+  }
+
+}
+
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05); /* Leve aumento */
+  cursor: pointer;
+}
+
+
+
+
+.card-sobre img{
+  width: 100%;
+}
+/* Animação de pulsar */
+@keyframes pulsar {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+/* Card padrão com pulsação */
+.card-sobre {
+  width: 500px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  animation: pulsar 2s infinite ease-in-out;
+  transition: transform 0.3s ease; /* suaviza quando fixa no hover */
+}
+
+/* Quando passa o mouse: fixa no maior tamanho */
+.card-sobre:hover {
+  animation: none;
+  transform: scale(1.08);
+  outline: 3px solid #00aaff;
+  outline-offset: 4px;
+  box-shadow: 0 0 20px rgba(0, 150, 255, 0.6);
+}
+
+
+.sobre-lado-a-lado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;               /* espaço entre imagem e carrossel */
+  margin-top: 40px;
+  flex-wrap: wrap;         /* garante que no celular fique um embaixo do outro */
+}
+
+.carrossel {
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+.contato-section {
+  padding: 60px 20px;
+  background: #f8f8f8;
+   color: #0066cc;
+}
+
+.titulo-contato {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #0066cc;
+}
+
+.subtitulo-contato {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.container-contato {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contato-info h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.contato-info p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.contato-info a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.contato-info a:hover {
+  text-decoration: underline;
+}
+
+/* Ícones sociais */
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+/* ícones circulares */
+.social-icon {
+  width: 42px;
+  height: 42px;
+  background: #222;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+  background: #555;
+}
+
+/* svg */
+.icon-svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+  transition: 0.3s ease;
+}
+
+.social-icon:hover .icon-svg {
+  fill: #ffd700;
+}
+
+/* cores específicas (caso queria ativar depois) */
+.ig { background: #E4405F; }
+.fb { background: #1877F2; }
+.tk { background: #000000; }
+.yt { background: #FF0000; }
+
+.contato-mapa {
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contato-mapa {
+    height: 250px;
+  }
+}
+
+
+
+footer {
+  background: #000000;
+  color: #fff;
+  padding: 40px 0 0;
+  margin-top: 60px;
+  border-top: 2px solid #000000;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.footer-desc {
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.footer-col h4 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin: 8px 0;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+  padding-left: 4px;
+}
+
+/* Redes sociais */
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 42px;
+  height: 42px;
+  background: #a80303;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+  background: #444;
+}
+
+.icon-svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+  transition: 0.3s ease;
+}
+
+.social-icon:hover .icon-svg {
+  fill: #ffd700;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid #000000;
+  margin-top: 20px;
+  background: #000000;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-col {
+    margin-bottom: 25px;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+.footer-logo-img {
+  width: 140px;    /* ajuste como quiser */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+
+
+
+

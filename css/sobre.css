@@ -1,0 +1,293 @@
+
+.sobre-container {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sessao {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  
+}
+
+.sessao.invertida {
+  flex-direction: row-reverse;
+}
+
+.conteudo {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+.conteudo h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.conteudo p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.imagem {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .sessao, .sessao.invertida {
+    flex-direction: column;
+  }
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0b0e1c;
+  color: rgb(112, 215, 255);
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem 0;
+  font-weight: bold;
+}
+
+.quem-somos {
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.terra {
+  position: absolute;
+  top: 100px;
+  left: -500px;
+  width: 900px;
+}
+
+.lua {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 80px;
+}
+
+.orbitas {
+  position: absolute;
+  top: 0;
+  left: -300px;
+  width: 100%;
+  height: 600px;
+  z-index: 0;
+}
+
+.orbitas ellipse {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 2px;
+}
+
+.linha-tempo {
+  position: relative;
+  margin-left: 150px;
+  padding-top: 300px;
+  z-index: 1;
+}
+
+.ponto {
+  position: absolute;
+  width: 220px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.ponto h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.ponto p {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.missao-visao-valores {
+  background-color: #0f132400;
+  padding: 4rem 2rem;
+  margin-top: 100px;
+}
+
+.missao-visao-valores .conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.texto, .valores {
+  flex: 1;
+  min-width: 300px;
+}
+
+.texto h3, .valores h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.texto p, .valores p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.valores ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+}
+
+.foguete {
+  width: 250px;
+  align-self: center;
+}
+
+
+
+
+/* ===========================
+   MOBILE: layout quem-somos
+   =========================== */
+/* ===========================
+   MOBILE FINAL (cole no fim)
+   =========================== */
+@media screen and (max-width: 768px) {
+
+  /* garantir que nada seja cortado e espaço para o planeta */
+  .quem-somos {
+    position: relative;
+    text-align: center;
+    padding: 2rem 1rem 14rem 1rem;
+    overflow: visible; /* importante para ver conteúdo que "sai" da caixa */
+  }
+
+  /* planeta fixado na base (sobrescreve top/left do desktop) */
+  .terra {
+    position: absolute !important;
+    bottom: -6px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 220px !important;
+    z-index: 2 !important;
+    opacity: 0.98;
+  }
+
+  /* órbitas: centralizadas, arcos ascendentes, z-index abaixo dos pontos */
+  .orbitas {
+    position: absolute;
+    left: 50%;
+    bottom: 110px;
+    transform: translateX(-50%) scale(0.85);
+    width: 160%;
+    height: 420px;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.45;
+  }
+  .orbitas ellipse {
+    fill: none;
+    stroke: rgba(255,255,255,0.09);
+    stroke-width: 1.8;
+    transform-origin: 50% 100%;
+  }
+  /* transformações individuais para virar arcos */
+  .orbitas ellipse:nth-of-type(1) { transform: translateY(160px) scaleX(0.58) scaleY(0.58); }
+  .orbitas ellipse:nth-of-type(2) { transform: translateY(120px) scaleX(0.7)  scaleY(0.7); }
+  .orbitas ellipse:nth-of-type(3) { transform: translateY(80px)  scaleX(0.82) scaleY(0.82); }
+  .orbitas ellipse:nth-of-type(4) { transform: translateY(40px)  scaleX(0.95) scaleY(0.95); }
+  .orbitas ellipse:nth-of-type(5) { transform: translateY(10px)  scaleX(1.05) scaleY(1.05); }
+  .orbitas ellipse:nth-of-type(6) { transform: translateY(-20px) scaleX(1.12) scaleY(1.12); }
+
+  /* LINHA DO TEMPO: empilhada, centralizada, com espaço para o planeta */
+  .linha-tempo {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse; /* inverte se quiser 2002 perto da Terra */
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 360px;
+    z-index: 3;
+    padding-bottom: 8.5rem;
+  }
+
+  /* IMPORTANTÍSSIMO: sobrescreve quaisquer estilos inline top/left e remove absolute */
+  .linha-tempo .ponto,
+  .ponto {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 92% !important;
+    max-width: 320px !important;
+    background: rgba(0,0,0,0.35) !important;
+    backdrop-filter: blur(2px);
+    color: #dff8ff !important;
+    padding: 0.95rem 1rem !important;
+    border-radius: 10px !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45) !important;
+    transform: translateZ(0);
+    z-index: 4; /* garante que os pontos fiquem acima do planeta e das órbitas */
+  }
+
+  .ponto h2 {
+    font-size: 1.05rem;
+    margin: 0 0 0.35rem 0;
+    color: #aee9ff;
+    font-weight: 700;
+  }
+
+  .ponto p {
+    font-size: 0.92rem;
+    line-height: 1.45;
+    margin: 0;
+    color: #cfefff;
+  }
+
+  /* Lua discreta */
+  .lua {
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    width: 50px;
+    z-index: 5;
+  }
+
+  /* Título ajustado */
+  .quem-somos h1 {
+    font-size: 2rem;
+    margin: 0.6rem 0 1.2rem 0;
+    color: rgb(112,215,255);
+    z-index: 6;
+  }
+}
