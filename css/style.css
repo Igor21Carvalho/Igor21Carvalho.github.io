@@ -614,10 +614,7 @@ img {
 .cursos-populares {
   position: relative;
   padding: 60px 0;
-  background-image: url("../img/fundo_cursos.jpg"); /* ALTERE O CAMINHO AQUI */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* 🔥 fundo travado */
+background-color: #c72929;
   color: #fff;
 }
 
@@ -673,6 +670,49 @@ img {
     animation: pulsar 2s infinite ease-in-out;
   }
 
+}
+
+
+/* FAIXA ENTRE AS SECTIONS */
+.faixa-disco {
+    width: 100%;
+    background: linear-gradient(90deg, #3d85f0, #63acff);
+    background-size: 300% 300%;
+    padding: 18px 0;
+    overflow: hidden;
+    position: relative;
+    
+    animation: discoGlow 6s infinite alternate;
+}
+
+/* movimento das cores do fundo */
+@keyframes discoGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* TEXTO CORRENDO */
+.faixa-scroll {
+    white-space: nowrap;
+    display: flex;
+    animation: textLoop 15s linear infinite;
+}
+
+.faixa-scroll span {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-right: 50px;
+    color: #fff;
+   
+}
+
+
+/* movimento contínuo esquerda → direita */
+@keyframes textLoop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 
