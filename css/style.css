@@ -94,7 +94,48 @@ body, html {
   display: flex;
 }
 
+/* BOTÃO COM GLOW PULSANTE */
+.explore {
+  padding: 14px 32px;
+  margin-top: 25px;
+  background: linear-gradient(135deg, #2cb1fd, #2d66e2);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+  letter-spacing: 0.5px;
 
+  /* Glow inicial */
+  box-shadow: 0 0 12px rgba(45, 123, 226, 0.7);
+
+  /* Animação de pulsar */
+  animation: glowPulse 1.8s infinite ease-in-out;
+}
+
+/* Animação */
+@keyframes glowPulse {
+  0% {
+    box-shadow:
+      0 0 12px rgba(45, 117, 226, 0.7),
+      0 0 20px rgba(45, 102, 226, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow:
+      0 0 20px rgb(45, 102, 226),
+      0 0 35px rgba(45, 108, 226, 0.8);
+    transform: scale(1.04);
+  }
+  100% {
+    box-shadow:
+      0 0 12px rgba(45, 129, 226, 0.7),
+      0 0 20px rgba(45, 123, 226, 0.4);
+    transform: scale(1);
+  }
+}
 
 
 
