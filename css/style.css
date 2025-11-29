@@ -13,6 +13,7 @@ body, html {
   width: 100%;
   padding: 20px 40px;
   z-index: 10;
+  align-items: center;
   background-color: transparent;
 }
 
@@ -24,20 +25,26 @@ body, html {
   justify-content: space-between;
   gap: 40px;
 }
-
+.nav-menu{
+  gap: 10px;
+  align-items: baseline;
+  display: flex;
+}
 /* LOGO */
 .nav-logo img {
   height: 50px;
   width: auto;
 }
 
+
 /* MENU CENTRAL */
 .nav-menu ul {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 30px;
   padding: 0;
-  margin: 0;
+  
 }
 
 .nav-menu ul li a {
@@ -53,8 +60,10 @@ body, html {
 
 /* BOTÕES LOGIN */
 .auth-buttons {
-  display: flex;
+  
+  display: block;
   gap: 15px;
+  align-items: center;
 }
 
 .auth-buttons .login,
@@ -80,7 +89,8 @@ body, html {
 
 .menu-toggle {
   display: none;
-  font-size: 28px;
+  right: 0;
+  font-size: 50px;
   background: none;
   color: white;
   border: none;
@@ -89,10 +99,7 @@ body, html {
   position: relative;
 }
 
-/* Menu mobile inicial oculto */
-.nav-menu {
-  display: flex;
-}
+
 
 /* BOTÃO COM GLOW PULSANTE */
 .explore {
@@ -357,24 +364,32 @@ img {
 }
 
 @media (max-width: 768px) {
- .top-nav-inner {
+  .top-nav-inner {
     display: flex;
-    align-items: center;
+      align-items: center;
     justify-content: space-between;
+    gap: 10px;
+    text-align: center;
+    flex-wrap: wrap;
   }
 
   .nav-logo img {
-    height: 22px;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
   }
 
   .menu-toggle {
-    display: block !important;
-    font-size: 30px;
+    display: block;
+    font-size: 28px;
     background: none;
-    border: none;
     color: white;
+    border: none;
     cursor: pointer;
-    z-index: 100;
+    z-index: 20;
+    align-self: center;
+    
   }
 
   .menu-toggle-auth {
@@ -393,51 +408,66 @@ img {
     justify-content: center;
   }
 
-   .nav-menu {
+  .nav-menu {
     display: none;
     position: absolute;
-    top: 55px;
-    left: 0;
-    width: 100%;
-    background: rgba(10, 20, 50, 0.95);
-    padding: 20px 0;
+    top: 100%;
+    left: 70%;
+    width: 20%;
+    background-color: rgba(10, 20, 50, 0.821);
+    
+    border-top: 1px solid #39a3ff;
+    z-index: 15;
+    border-radius: 0,0, 20px;
     text-align: center;
-    z-index: 50;
   }
 
-  
   .nav-menu.active {
-    display: block !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
-  /* Itens do menu */
   .nav-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
   }
 
   .nav-menu ul li {
-    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
   }
 
   .nav-menu ul li a {
+    font-size: 16px;
     color: white;
-    font-size: 18px;
-    padding: 10px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s;
     display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
   }
 
   .nav-menu ul li a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
+    background-color: rgba(15, 42, 123, 0.61);
+    color: white;
+    font-weight: bolder;
   }
 
   .floating-character {
       width: 200vw !important;
   max-width: 1000px !important;
   height: auto !important;
-  right: -250px!important;
+  right: -280px!important;
   bottom: -80px!important;
   position: absolute !important;
   z-index: 2 !important;
@@ -449,20 +479,21 @@ img {
   .hero-content {
     
     text-align: left;
-    padding: 10;
+    padding: 5;
     right: 20%;
     top: -10%;
     margin-top: 10px;
   }
    .hero-content h1{
     
-   font-size: 400% !important;
+   font-size: 350% !important;
   }
 
   .buttons {
     flex-direction: column;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: 5px;
+    font-size: 40px;
   }
 
   .scroll-nav {
@@ -545,27 +576,8 @@ img {
     bottom: -10px;
     left: -10px;
   }
-.auth-buttons {
-    display: none !important;
-  }
 
-  /* Exibe os botões DENTRO do menu hambúrguer */
-  .nav-menu.active + .auth-buttons,
-  .nav-menu.active .auth-buttons {
-    display: flex !important;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
-    padding: 0 20px;
-  }
-  .auth-buttons button {
-    width: 100%;
-    padding: 12px;
-    border-radius: 10px;
-  }
-.top-nav {
-  right: 0 !important;
-}
+
 }
 
 
