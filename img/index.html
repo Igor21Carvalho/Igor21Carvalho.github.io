@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DreamSchool</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header class="top-nav">
+  <div class="container top-nav-inner">
+
+    <a href="index.html">
+      <div class="nav-logo">
+        <img src="img/Dream horizontal branco.png" alt="Logo DreamSchool">
+      </div>
+    </a>
+
+    <!-- MENU que abrirá no mobile -->
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="#contato">Contatos</a></li>
+      </ul>
+
+      <!-- BOTÕES AGORA DENTRO DO MENU (ESSENCIAL!) -->
+      <div class="auth-buttons">
+        <a href="https://wa.me/5515997885234?text=Olá, quero conhecer a Dreamschool!" target="_blank">
+          <button class="login">Fale Conosco</button>
+        </a>
+
+        <a href="https://ead.dreamschool.com.br/metodo/login.php" target="_blank">
+          <button class="signup">Portal EAD</button>
+        </a>
+
+        <a href="https://apostiladigital.grupooportunidade.com.br/acesso/login" target="_blank">
+          <button class="signup">Apostilas</button>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Botão hamburguer -->
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+  </div>
+</header>
+
+
+  <main id="home" class="hero-section">
+
+
+    <div class="blue-mask"></div>
+   
+        <div class="video-area">
+    <video autoplay muted loop playsinline>
+        <source src="img/planeta.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos em HTML5.
+    </video>
+  
+        </div>
+
+
+
+
+
+    <div class="container hero-content">
+      <h1>VAMOS <br/> DECOLAR?</h1>
+      
+      <div class="buttons">
+        <button class="explore" onclick="window.location.href='cursos.html'">Explorar Cursos</button>
+
+      </div>
+    </div>
+
+    <img src="img/personagem2.png" alt="Aluno no livro voador" class="floating-character"/>
+
+    <!--<div class="scroll-nav">
+            <div class="dot" data-target="#home">
+        <img src="assets/home.png" alt="Home" />
+        </div>
+        <div class="dot" data-target="#sobre">
+        <img src="assets/sobre.png" alt="Sobre" />
+        </div>
+        <div class="dot" data-target="#cursos-populares">
+        <img src="assets/cursos.png" alt="Cursos" />
+        </div>
+        <div class="dot" data-target="#contato">
+        <img src="assets/contato.png" alt="Contato" />
+        </div>
+    </div>-->
+  </main>
+
+
+
+
+
+ <section id="sobre" class="sobre">
+  
+
+    <h2 class="titulo-sobre">TRANSFORMANDO APRENDIZADO EM OPORTUNIDADE</h2>
+    <p class="descricao-sobre">
+      Somos a DreamSchool: uma escola moderna, prática e feita para quem quer aprender de verdade.
+    </p>
+  <div class="sobre-lado-a-lado">
+    <!-- Card/Imagem de destaque -->
+    <a href="sobre.html" class="card-sobre-link">
+      <div class="card-sobre">
+        <img src="img/sobre-destaque.png" alt="Conheça a DreamSchool">
+        
+      </div>
+    </a>
+
+    <!-- Carrossel -->
+    <div class="carrossel">
+      <div class="slides">
+        <img src="img/carrossel1.jpg" class="slide ativo">
+        <img src="img/carrossel2.jpg" class="slide">
+        <img src="img/carrossel3.jpg" class="slide">
+      </div>
+
+      <div class="indicadores">
+        <span class="indicador ativo"></span>
+        <span class="indicador"></span>
+        <span class="indicador"></span>
+      </div>
+    </div>
+
+  </div>
+ 
+</section>
+
+<section class="faixa-disco">
+  <div class="faixa-scroll">
+    
+    <span>SONHE ALTO! POIS TE FAREMOS DECOLAR </span>
+    <span>SONHE ALTO! POIS TE FAREMOS DECOLAR </span>
+     <span>SONHE ALTO! POIS TE FAREMOS DECOLAR </span>
+      <span>SONHE ALTO! POIS TE FAREMOS DECOLAR </span>
+  </div>
+</section>
+
+
+
+<section id="cursos-populares" class="cursos-populares">
+  <div class="container">
+    <h2 class="titulo-populares">CURSOS MAIS POPULARES</h2>
+    <p class="subtitulo-populares">Confira os preferidos dos alunos.</p>
+
+    <!-- Novo carrossel simples -->
+    <div class="carrossel-cursos">
+      <div class="slides-cursos">
+        <img src="img/catalogo/1.jpg" class="slide-curso">
+        <img src="img/catalogo/2.jpg" class="slide-curso">
+        <img src="img/catalogo/3.jpg" class="slide-curso">
+        <img src="img/catalogo/4.jpg" class="slide-curso">
+        <img src="img/catalogo/5.jpg" class="slide-curso">
+        <img src="img/catalogo/6.jpg" class="slide-curso">
+        <img src="img/catalogo/7.jpg" class="slide-curso">
+        <img src="img/catalogo/8.jpg" class="slide-curso">
+        <img src="img/catalogo/9.jpg" class="slide-curso">
+        <img src="img/catalogo/10.jpg" class="slide-curso">
+        <img src="img/catalogo/11.jpg" class="slide-curso">
+        <img src="img/catalogo/12.jpg" class="slide-curso">
+        <img src="img/catalogo/13.jpg" class="slide-curso">
+        <img src="img/catalogo/14.jpg" class="slide-curso">
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="contato-section">
+  <div class="container-contato">
+
+    <h2 class="titulo-contato">CONTATO</h2>
+    <p class="subtitulo-contato">Entre em contato conosco</p>
+
+    <div class="contato-grid">
+
+      <!-- Bloco 1 – Informações -->
+      <div class="contato-info">
+        <h3>Informações</h3>
+        
+        <p><strong>📍 Endereço:</strong><br>
+          <a href="https://www.google.com/maps" target="_blank">
+            Praça Francisco Alves Negrão - 225 - Itararé - SP
+          </a>
+        </p>
+
+        <p><strong>☎️ Secretaria</strong><br>
+          <a href="https://wa.me/5515997206914" target="_blank">
+            (15) 9 9720-6914
+          </a>
+        </p>
+        <p><strong>☎️ Comercial</strong><br>
+          <a href="https://wa.me/5515997885234" target="_blank">
+            (15) 9 9788-5234
+          </a>
+        </p>
+        <p><strong>☎️ Pedagógico</strong><br>
+          <a href="https://wa.me/5515997220245" target="_blank">
+            (15) 9 9722-0245
+          </a>
+        </p>
+
+        <p><strong>✉️ E-mail:</strong><br>
+          <a href="mailto:infobrasil@gmail.com">
+            infobrasil@gmail.com
+          </a>
+        </p>
+
+       <div class="social-links">
+
+ 
+
+</div>
+      </div>
+
+      <!-- Bloco 2 – Mapa (opcional) -->
+      <div class="contato-mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2840.3243054518452!2d-49.33586672576312!3d-24.112585182072362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c23362019636f7%3A0x7f47d3ea696ea183!2sDreamSchool%20-%20Educa%C3%A7%C3%A3o%20%7C%20Tecnologia%20%7C%20Idiomas!5e1!3m2!1spt-BR!2sbr!4v1763752247742!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Coluna 1 - Logo / Nome -->
+    <div class="footer-col">
+  <img src="img/logo_vertical.png" alt="DreamSchool Logo" class="footer-logo-img" />
+  <p class="footer-desc">Mudando vidas através da educação.</p>
+</div>
+
+    <!-- Coluna 2 - Links rápidos -->
+    <div class="footer-col">
+      <h4>Links rápidos</h4>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="quem-somos.html">Quem Somos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+<div class="footer-col">
+  <h4>Siga-nos</h4>
+  <div class="footer-social">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/dreamschoolbrasil/" class="social-icon" target="_blank">
+      <svg viewBox="0 0 24 24" class="icon-svg">
+        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm0 1.5A3.5 3.5 0 1 0 12 15a3.5 3.5 0 0 0 0-7zm5.25-.88a1.12 1.12 0 1 1 0 2.24a1.12 1.12 0 0 1 0-2.24z"></path>
+      </svg>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/dreamschoolbrasil/?locale=pt_BR" class="social-icon" target="_blank">
+      <svg viewBox="0 0 24 24" class="icon-svg">
+        <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1c.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12"></path>
+      </svg>
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/@DreamSchoolBrasil" class="social-icon" target="_blank">
+      <svg viewBox="0 0 24 24" class="icon-svg">
+        <path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.948C18 5.5 12 5.5 12 5.5s-6 0-7.86.553A2.75 2.75 0 0 0 2.2 8.001A28.6 28.6 0 0 0 2 12a28.6 28.6 0 0 0 .2 3.999a2.75 2.75 0 0 0 1.94 1.948C6 18.5 12 18.5 12 18.5s6 0 7.86-.553a2.75 2.75 0 0 0 1.94-1.948A28.6 28.6 0 0 0 22 12a28.6 28.6 0 0 0-.2-3.999zM10 15.5v-7l6 3.5l-6 3.5z"></path>
+      </svg>
+    </a>
+
+  </div>
+</div>
+
+    
+  </div>
+
+  <!-- Barra final -->
+  <div class="footer-bottom">
+    <p>© 2025 DreamSchool. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+
+<a href="https://wa.me/5515997885234?text=Olá, quero conhecer a Dreamschool!" class="whatsapp-btn" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+  <script src="js/script.js"></script>
+</body>
+</html>
