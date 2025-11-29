@@ -285,10 +285,6 @@ body, html {
   z-index: 3;
 }
 
-.container-sobre {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
 .titulo-sobre {
   font-size: 2.5rem;
@@ -481,8 +477,8 @@ img {
     text-align: left;
     padding: 5;
     right: 20%;
-    top: -10%;
-    margin-top: 10px;
+    top: -20%;
+    
   }
    .hero-content h1{
     
@@ -492,7 +488,7 @@ img {
   .buttons {
     flex-direction: column;
     gap: 10px;
-    margin-top: 5px;
+    
     font-size: 40px;
   }
 
@@ -534,8 +530,11 @@ img {
   
 }
  .sobre {
-    padding: 40px 20px;
+    padding: 20px 20px 20px 20px;
     text-align: center;
+  }
+  .container-sobre{
+    padding: 20px;
   }
 
   .titulo-sobre {
@@ -663,7 +662,7 @@ background-color: #c72929;
 
   .carrossel {
     width: 90%;
-    max-width: 350px;
+    max-width: 320px;
     height: 200px;            /* proporção boa pro celular */
   }
 
@@ -1087,5 +1086,12 @@ footer {
   }
   100% {
     box-shadow: 0 0 10px rgba(37, 211, 102, 0.6);
+  }
+}
+
+@media (max-width: 768px) {
+  .whatsapp-btn{
+  left: 0;
+  margin-left: 10px;
   }
 }
