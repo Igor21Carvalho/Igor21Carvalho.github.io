@@ -408,9 +408,9 @@ img {
     display: none;
     position: absolute;
     top: 100%;
-    left: 70%;
-    width: 20%;
-    background-color: rgba(10, 20, 50, 0.821);
+    right: 10%;
+    width: 25%;
+    background-color: rgba(0, 132, 255, 0.821);
     
     border-top: 1px solid #39a3ff;
     z-index: 15;
@@ -422,7 +422,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 1px;
   }
 
   .nav-menu ul {
@@ -431,7 +431,7 @@ img {
   margin: 0;
   width: 100%;
   align-items: center;
-  gap: 10px;
+  gap: 2px;
   }
 
   .nav-menu ul li {
@@ -487,10 +487,41 @@ img {
 
   .buttons {
     flex-direction: column;
-    gap: 10px;
+    gap: 1px;
     
     font-size: 40px;
   }
+
+
+  /* BOTÕES LOGIN */
+.auth-buttons {
+  
+  display: block;
+  gap: 0px;
+  align-items: center;
+}
+
+.auth-buttons .login,
+.auth-buttons .signup {
+ 
+  border-radius: 0px;
+  border: none;
+  cursor: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.auth-buttons .login {
+  background-color: #008cff;
+  color: white;
+}
+
+.auth-buttons .signup {
+  background-color: transparent;
+  color: white;
+  background-color: #00aeff7e;
+  border: 1px solid white;
+}
 
   .scroll-nav {
   display: none !important;
