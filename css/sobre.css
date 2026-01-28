@@ -11,7 +11,7 @@
   aspect-ratio: 16 / 9;  /* mantém proporção */
   height: auto;
   display: block;
-  border
+ border-radius: 12px;
 
 }
 /* =================== EQUIPE =================== */
@@ -116,3 +116,4 @@
 .equipe-card.destaque:hover {
   transform: scale(1.05);
 }
+
