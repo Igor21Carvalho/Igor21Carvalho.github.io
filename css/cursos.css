@@ -1,0 +1,275 @@
+/* GALERIA */
+.galeria-cursos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 🔥 sempre 4 por linha */
+  gap: 20px;
+  padding: 40px;
+}
+
+/* CARD DO CURSO */
+.card-curso {
+  background: #fff;
+  border-radius: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+
+  aspect-ratio: 4 / 4; /* 🔥 controla o formato do card */
+  transition: transform .3s ease;
+}
+
+/* IMAGEM */
+.card-curso img {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s ease;
+}
+
+/* HOVER */
+.card-curso:hover img {
+  transform: scale(1.06);
+}
+
+/* TÍTULO */
+.card-titulo {
+  padding: 12px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #fff;
+}
+
+/* ESPAÇAMENTO PÁGINA CURSOS */
+.cursos-page {
+  padding-top: 120px; /* ajuste conforme o tamanho do header */
+  text-align: center;
+}
+
+/* =============================
+   MODAL
+============================= */
+
+.curso-modal-bg {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+    z-index: 99999;
+    color: black;
+}
+
+.curso-modal-bg.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* CONTEÚDO DO MODAL */
+.curso-modal {
+    background: #fff;
+    width: 50%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    position: relative;
+    animation: pop .3s ease;
+}
+
+@keyframes pop {
+    from { transform: scale(.9); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+/* IMAGEM DO MODAL */
+.modal-img {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    max-height: 300px; /* limita para não ficar gigante */
+    object-fit: contain; /* mantém a imagem inteira, sem cortes */
+    border-radius: 14px;
+    margin-bottom: 14px;
+}
+
+
+/* TEXTO */
+.modal-title {
+    font-size: 1.9rem;
+    margin: 10px 0 5px;
+}
+
+.modal-desc {
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.modal-carga {
+    font-size: 1.1rem;
+    margin: 15px 0 25px;
+}
+
+/* BOTÃO */
+.modal-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #0066ff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    border-radius: 10px;
+    transition: background .3s ease;
+}
+
+.modal-btn:hover {
+    background: #004ee0;
+}
+
+/* BOTÃO DE FECHAR */
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 38px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+    color: #ffffff;
+    background: rgba(0,0,0,0.55);
+    padding: 4px 14px;
+    border-radius: 8px;
+    z-index: 9999;
+    transition: transform .2s ease, background .2s ease;
+}
+
+.modal-close:hover {
+    background: rgba(0,0,0,0.8);
+    transform: scale(1.15);
+}
+
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.filtro-grupo h4 {
+  margin-bottom: 10px;
+}
+
+.filtro-grupo button {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  margin: 4px;
+}
+
+.filtro-grupo button.ativo {
+  background: #0066ff;
+  color: white;
+  border-color: #0066ff;
+}
+
+
+.btn-limpar {
+  background: transparent;
+  border: 2px solid #0066ff;
+  color: #0066ff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-limpar:hover {
+  background: #0066ff;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+
+  /* ===== FILTROS ===== */
+  .filtros {
+    flex-direction: row;        /* mantém lado a lado */
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .filtro-grupo {
+    flex: 1;                    /* cada grupo ocupa metade */
+    text-align: center;
+  }
+
+  .filtro-grupo h4 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .filtro-grupo button {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    margin: 3px;
+  }
+
+  /* botão limpar menor */
+  .btn-limpar {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+  }
+
+  /* ===== GALERIA ===== */
+  .galeria-cursos {
+    grid-template-columns: 1fr; /* 🔥 1 curso por linha */
+    padding: 20px;
+  }
+
+  /* cards um pouco mais baixos */
+  .card-curso {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* ===== MODAL ===== */
+  .curso-modal {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .modal-title {
+    font-size: 1.4rem;
+  }
+
+  .modal-desc,
+  .modal-carga {
+    font-size: 1rem;
+  }
+
+  /* ===== MENU TOPO (caso use hamburger) ===== */
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

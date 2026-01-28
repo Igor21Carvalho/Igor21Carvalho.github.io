@@ -1,0 +1,118 @@
+/* =================== VIDEO HERO =================== */
+.sobre-video {
+  max-width: 900px;      /* controla o tamanho máximo */
+  width: 90%;            /* responsivo */
+  margin: 90px auto 0;   /* centraliza horizontalmente */
+}
+
+/* iframe ou video */
+.video-sobre {
+  width: 100%;
+  aspect-ratio: 16 / 9;  /* mantém proporção */
+  height: auto;
+  display: block;
+  border
+
+}
+/* =================== EQUIPE =================== */
+
+.equipe-section {
+  padding: 80px 20px;
+  text-align: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.equipe-section h1 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.equipe-intro {
+  font-size: 1.15rem;
+  margin-bottom: 50px;
+  opacity: 0.85;
+}
+
+
+/* ===== GRID ===== */
+
+.equipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  padding: 0 20px;
+}
+
+
+/* ===== CARD ===== */
+
+.equipe-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 35px 25px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  text-align: center;
+  transition: .3s ease;
+  color: black;
+}
+
+.equipe-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.16);
+}
+
+
+/* ===== FOTO ===== */
+
+.equipe-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+
+  border: 5px solid #0066ff;
+  box-shadow: 0 0 15px rgba(0,102,255,0.35);
+}
+
+
+/* ===== TEXTO ===== */
+
+.equipe-card h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.cargo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0066ff;
+  margin-bottom: 12px;
+}
+
+.desc {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  opacity: 0.85;
+}
+
+
+/* ===== DESTAQUE DO DIRETOR ===== */
+
+.equipe-card.destaque {
+  border: 3px solid #0066ff;
+  background: #f3f8ff;
+  transform: scale(1.03);
+}
+
+.equipe-card.destaque img {
+  border-color: #ffbb00;
+  box-shadow: 0 0 18px rgba(255,200,0,0.6);
+}
+
+.equipe-card.destaque:hover {
+  transform: scale(1.05);
+}

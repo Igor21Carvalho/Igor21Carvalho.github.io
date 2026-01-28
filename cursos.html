@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/cursos.css">
+<title>Cursos - DreamSchool</title>
+
+</head>
+<body>
+<header class="top-nav">
+  <div class="container top-nav-inner">
+
+    <a href="index.html">
+      <div class="nav-logo">
+        <img src="img/Dream horizontal branco.png" alt="Logo DreamSchool">
+      </div>
+    </a>
+
+    <!-- MENU que abrirá no mobile -->
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="index.html#contato">Contatos</a></li>
+      </ul>
+
+      <!-- BOTÕES AGORA DENTRO DO MENU (ESSENCIAL!) -->
+      <div class="auth-buttons">
+        <a href="https://wa.me/5515997885234?text=Olá, quero conhecer a Dreamschool!" target="_blank">
+          <button class="login">Fale Conosco</button>
+        </a>
+
+        <a href="https://ead.dreamschool.com.br/metodo/login.php" target="_blank">
+          <button class="signup">Portal EAD</button>
+        </a>
+
+        <a href="https://apostiladigital.grupooportunidade.com.br/acesso/login" target="_blank">
+          <button class="signup">Apostilas</button>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Botão hamburguer -->
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+  </div>
+</header>
+
+<section class="cursos-page">
+
+  <h1 class="titulo-cursos">Catálogo de Cursos</h1>
+  <p class="subtitulo-cursos">Escolha por idade ou área</p>
+
+  <!-- FILTROS -->
+  <div class="filtros">
+
+  <div class="filtro-grupo">
+    <h4>Idade</h4>
+    <button id="limparFiltros" class="btn-limpar">Limpar filtros</button>
+    <button data-idade="infantil">Infantil</button>
+    <button data-idade="jovem">Jovem</button>
+    <button data-idade="adulto">Adulto</button>
+  </div>
+
+  <div class="filtro-grupo">
+    <h4>Tema</h4>
+    <button data-tema="tecnologia">Tecnologia</button>
+    <button data-tema="design">Design & Criação</button>
+    <button data-tema="administrativo">Administrativo</button>
+    <button data-tema="idiomas">Idiomas</button>
+    
+  </div>
+   
+</div>
+
+<div class="galeria-cursos" id="galeriaCursos"></div>
+
+</section>
+
+
+<!-- =============================
+     MODAL
+============================= -->
+<div class="curso-modal-bg" id="cursoModal">
+  <div class="curso-modal">
+
+    <span class="modal-close" id="closeModal">&times;</span>
+
+    <img id="modalImg" class="modal-img">
+
+    <h2 id="modalTitle" class="modal-title"></h2>
+
+    <p id="modalDesc" class="modal-desc"></p>
+
+    <p class="modal-carga">
+      <strong>Duração:</strong> <span id="modalCarga"></span>
+    </p>
+
+    <a href="https://wa.me/5515997885234?text=Olá, quero conhecer a Dreamschool!" target="_blank" class="modal-btn">Saiba mais</a>
+
+  </div>
+</div>
+
+
+<script src="js/script.js"></script>
+<script src="js/script_cursos.js"></script>
+</body>
+</html>
