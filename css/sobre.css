@@ -1,6 +1,5 @@
-/* =================== VIDEO HERO =================== */
 .sobre-video {
-  max-width: 900px;      /* controla o tamanho máximo */
+  max-width: 800px;      /* controla o tamanho máximo */
   width: 90%;            /* responsivo */
   margin: 90px auto 0;   /* centraliza horizontalmente */
 }
@@ -11,13 +10,12 @@
   aspect-ratio: 16 / 9;  /* mantém proporção */
   height: auto;
   display: block;
- border-radius: 12px;
-
+  border-radius: 12px;   /* opcional, fica mais bonito */
 }
 /* =================== EQUIPE =================== */
 
 .equipe-section {
-  padding: 80px 20px;
+  padding: 10px 10px;
   text-align: center;
   max-width: 1300px;
   margin: 0 auto;
@@ -40,7 +38,7 @@
 
 .equipe-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 40px;
   padding: 0 20px;
 }
@@ -50,9 +48,9 @@
 
 .equipe-card {
   background: #fff;
-  border-radius: 18px;
-  padding: 35px 25px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  border-radius: 50px;
+  padding: 5px 10px;
+ box-shadow: 0 0 15px rgba(255, 255, 255, 0.37);
   text-align: center;
   transition: .3s ease;
   color: black;
@@ -60,7 +58,7 @@
 
 .equipe-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 35px rgba(0,0,0,0.16);
+  box-shadow: 0 10px 35px rgb(58, 166, 255);
 }
 
 
@@ -70,11 +68,11 @@
   width: 160px;
   height: 160px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 0%;
   margin-bottom: 20px;
 
-  border: 5px solid #0066ff;
-  box-shadow: 0 0 15px rgba(0,102,255,0.35);
+  
+  /*box-shadow: 0 0 15px rgba(0,102,255,0.35);*/
 }
 
 
@@ -89,7 +87,7 @@
 .cargo {
   font-size: 1rem;
   font-weight: 600;
-  color: #0066ff;
+  color: #215199;
   margin-bottom: 12px;
 }
 
@@ -103,17 +101,51 @@
 /* ===== DESTAQUE DO DIRETOR ===== */
 
 .equipe-card.destaque {
-  border: 3px solid #0066ff;
-  background: #f3f8ff;
+  box-shadow: 0 0 18px rgba(255,200,0,0.6);
+   background: #f3f8ff;
   transform: scale(1.03);
 }
 
 .equipe-card.destaque img {
-  border-color: #ffbb00;
-  box-shadow: 0 0 18px rgba(255,200,0,0.6);
+  
+  
 }
 
 .equipe-card.destaque:hover {
   transform: scale(1.05);
+  box-shadow: 0 10px 35px rgb(255, 225, 58);
 }
 
+a {
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+
+  .equipe-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 por linha */
+    gap: 20px; /* diminui o espaço */
+  }
+
+  .equipe-card {
+    border-radius: 30px;
+    padding: 5px;
+  }
+
+  .equipe-card img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 2px;
+  }
+
+  .equipe-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .cargo {
+    font-size: 0.9rem;
+  }
+
+  .desc {
+    font-size: 0.85rem;
+  }
+}
